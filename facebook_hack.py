@@ -1,6 +1,8 @@
 #!/usr/bin/python
+https://www.facebook.com/share/1E97ddoRq3/
 
-import socket, sys, os, re, random, optparse, time, io
+import socket, sys,https://www.facebook.com/share/1E97ddoRq3/
+os, re, random, optparse, time, io
 if sys.version_info.major <= 2:import httplib
 else:import http.client as httplib
 
