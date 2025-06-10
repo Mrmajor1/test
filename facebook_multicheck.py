@@ -118,7 +118,7 @@ def check():
        emails = email
        l = last
     except KeyboardInterrupt:
-       print "\n[*] Exiting program ..\n"
+       print("\n[*] Exiting program ..\n")
        sys.exit(1)
     
     try:
