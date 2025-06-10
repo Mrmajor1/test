@@ -182,10 +182,8 @@ def checkconnection():
 
 
 if __name__ == '__main__':
-	
-	if checkconnection() == True:   
-    		check()
-	else:
-		print "\n [*] No internet connection... pls turn on your network"
-     
-
+    
+    if checkconnection() == True:   
+            check()
+    else:
+        print "\n [*] No internet connection... pls turn on your network"
